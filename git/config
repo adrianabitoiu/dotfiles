@@ -1,0 +1,36 @@
+[core]
+	autocrlf = true
+[user]
+	email = adrianabitoiu@gmail.com
+	name = Adriana Bitoiu
+[alias]
+	lol = log --pretty=\"format:%C(blue bold)::%Creset %C(white bold)%h%Creset - %C(white)%s%Creset - %C(white bold)%an%Creset <%C(blue bold)%ae%Creset> (%C(green bold)%cr%Creset)\"
+    st = status -s -b --ignored
+    a = add
+    lc = log --pretty=\"format:%C(blue bold)::%Creset %C(white bold)%h%Creset - %C(white)%s%Creset - %C(white bold)%an%Creset <%C(blue bold)%ae%Creset> (%C(green bold)%cr%Creset)\" --branches --not --remotes
+    lm = log --pretty=\"format:%C(blue bold)::%Creset %C(white bold)%h%Creset - %C(white)%s%Creset - %C(white bold)%an%Creset <%C(blue bold)%ae%Creset> (%C(green bold)%cr%Creset)\" --merges
+    lf = ls-files
+	unstage = reset HEAD --
+	drop = checkout --
+[color]
+    ui = always
+    interactive = auto
+[color "branch"]
+    current = green bold
+    local = white
+    remote = red bold
+[color "status"]
+    added = yellow bold
+    changed = green bold
+    untracked = red bold
+[color "diff"]
+    meta = white dim
+    frag = cyan
+    old = red bold
+    new = green bold
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+	required = true
