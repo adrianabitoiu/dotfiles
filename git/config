@@ -3,6 +3,7 @@
 [user]
     email = adrianabitoiu@gmail.com
     name = Adriana Bitoiu
+	signingkey = 0EB89A9E773C8ABB
 [alias]
     lol = log --pretty=\"format:%C(blue bold)::%Creset %C(white bold)%h%Creset - %C(white)%s%Creset - %C(white bold)%an%Creset <%C(blue bold)%ae%Creset> (%C(green bold)%cr%Creset)\"
     st = status -s -b --ignored
@@ -34,3 +35,5 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+[commit]
+	gpgsign = true
