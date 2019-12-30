@@ -1,0 +1,170 @@
+!Xcursor.theme: Oxygen Indigo
+!Xcursor.theme: ComixCursors Black
+!Xcursor.theme: Oxygen Silver Grey
+Xcursor.theme: Grounation
+!Xcursor.theme: Capitaine Cursors
+! sizes: 16, 24, 32, 48, 64
+Xcursor.size: 32
+
+Xft.dpi: 102
+Xft.antialias: true
+Xft.hinting: true
+Xft.autohint: false
+Xft.rgba: rgb
+! hint styles: hintnone, hintslight, hintmedium, hintfull
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+! URxvt configuration
+URxvt*termName: rxvt-256color
+!URxvt.geometry: 120x22
+!URxvt.geometry: 120x21
+URxvt.geometry: 100x20
+URxvt*loginShell: true
+URxvt.scrollStyle: rxvt
+URxvt.saveLines: 20000
+URxvt*scrollBar: false
+URxvt*secondaryScroll: true
+URxvt.pointerBlank: true
+URxvt*saveLines: 65535
+URxvt.borderLess: false
+!URxvt.bell-command: ??
+URxvt*urgentOnBell: true
+!URxvt*override-redirect: false
+!URxvt*borderLess: false
+!URxvt*internalBorder: 0
+!URxvt*externalBorder: 0
+! do not scroll with output
+!URxvt*scrollTtyOutput: false
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+!URxvt*scrollWithBuffer: true
+! scroll back to the bottom on keypress
+!URxvt*scrollTtyKeypress: true
+
+URxvt*font: xft:Fira Mono:medium:size=9.5
+URxvt*boldFont: xft:Fira Mono:medium:size=9.5
+!URxvt*dynamicColors: true
+!URxvt*inheritPixmap: true
+URxvt*letterSpace: -1
+!URxvt*lineSpace: 3
+!URxvt*lineSpace: -1
+URxvt*boldMode: false
+URxvt*skipBuiltinGlyphs: true
+
+! - Cursor
+!URxvt*cursorUnderline: true
+URxvt*cursorBlink: true
+URxvt*cursorColor: #ceb8f9
+!URxvt*cursorColor: #d8ecc6
+
+! - pseudo transparency
+!URxvt*shading: 10
+!URxvt*shading: 0
+!URxvt*transparent: true
+
+! - true transparency
+! 32 for true transparency
+!URxvt*depth: 24
+URxvt*depth: 32
+!URxvt*background: [85]#000000
+!URxvt*background: [85]#090909
+
+URxvt.perl-ext: default,url-select
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+URxvt.underlineURLs: true
+URxvt.matcher.button: 0
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-o: perl:url-select:select_next
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.copyCommand: xsel -ib
+URxvt.pasteCommand: xsel -ob
+
+!URxvt.matcher.pattern.0: \\b(?:(?:https?|ftp|news|file):\/\/|mailto:)[ab-zA-Z0-9\-\@;\/?:&=%\$_.+!*\x27(),~#]+ [ab-zA-Z0-9\-\@;\/?:&=%\$_+!*\x27()~]
+!URxvt*matcher.pattern.0: \\b(?:(?:https?|ftp):\/\/|mailto:)[\\w\-\@;\/?:&=%\$_.+!*\x27(),~#]+ [\\w\-\@;\/?:&=%\$_+!*\x27()~]
+!URxvt*matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+URxvt*matcher.pattern.2: \\bhttps?:\/\/[\\w-.]*\/[\\w./?&@#-]*.(jpg|jpeg|png)
+URxvt*matcher.launcher.2: feh $0
+URxvt.matcher.rend.0: Uline fg8
+URxvt*matcher.pattern.3: \\bhttp:\/\/(www.youtube|youtube).com\/watch\\?v=([\\w-]*)
+URxvt*matcher.launcher.3: /usr/bin/vlc $0
+URxvt*matcher.pattern.4: \\bhttps?:\/\/[\\w-.]*\/[\\w./?&@#-]*.(?i)(mp3|mp4|ogg|wav|wma|flv)
+URxvt*matcher.launcher.4: mpv $0
+
+! - colors
+!URxvt.tintColor: red
+URxvt.colorMode: true
+URxvt.colorBD: #66FFFF
+URxvt.colorBL: #CC0000
+URxvt.colorRV: #003366
+URxvt.colorUL: #5e8dc1
+
+URxvt.colorBDMode: on
+URxvt.colorRLMode: on
+URxvt.colorRVMode: on
+URxvt.colorULMode: on
+
+!URxvt.fading: 50
+!URxvt.fadeColor: black
+!URxvt.throughColor: #8080f0
+!URxvt.underlineColor: yellow
+!URxvt.highlightColor: #1E90FF
+
+! - Colorscheme
+URxvt*background: #282729
+!URxvt*foreground: #dcf
+URxvt*foreground: #ffffff
+!URxvt*foreground: #d2c6ec
+!URxvt*foreground: #d8ecc6
+!URxvt*foreground: #f2ffb3
+!URxvt*foreground: #fff2b3
+
+*background: #272822
+*foreground: #ffffff
+
+URxvt.highlightColor: #8b70c2
+URxvt.highlightTextColor: #ffffff
+
+! dark black
+*.color0: #000000
+! bright dark
+*.color8: #808080
+
+! dark red
+*.color1: #ff5458
+! bright red
+*.color9: #ff8080
+
+! dark green
+*.color2: #85b34d
+! bright green
+*.color10: #b7e085
+
+! dark yellow
+*.color3: #ffb378
+! bright yellow
+*.color11: #ffe9aa
+
+! dark blue
+*.color4: #0068b3
+! bright blue
+*.color12: #80bfff
+
+! dark magenta
+*.color5: #906cff
+! bright magenta
+*.color13: #c991e1
+
+! dark cyan
+*.color6: #63f2f1
+! bright cyan
+*.color14: #aaffe4
+
+! dark gray
+*.color7: #a6a6a6
+! bright gray
+*.color15: #d9d9d9
