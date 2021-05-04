@@ -1,0 +1,37 @@
+if [ -f ~/.zsh_functions ]; then
+    . ~/.zsh_functions
+fi
+
+export EDITOR=vim
+export PAGER=less
+
+# Go related
+export GOPATH=$HOME/.go
+export GOBIN=$GOPATH/bin
+
+# Node.js related
+export npm_config_prefix=$HOME/.local
+export NPM_PKG=$HOME/.npm-pkg
+export NPM_BIN=$NPM_PKG/bin
+export NODE_PATH=$NPM_PKG/lib/node_modules
+
+export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
+export ANDROID_SDK_ROOT='/opt/android-sdk'
+
+if declare -f add_to_path >/dev/null; then
+    add_to_path $GOBIN
+    add_to_path $NPM_BIN
+    add_to_path $HOME/.local/bin
+    add_to_path $HOME/.gem/ruby/default/bin
+    add_to_path $HOME/.poetry/bin
+    add_to_path $HOME/.cargo/bin
+    add_to_path $HOME/.nimble/bin
+    add_to_path $HOME/.choosenim/toolchains/current/bin
+    add_to_path $HOME/.config/bspwm
+    add_to_path $HOME/.eggs/bin
+    add_to_path $HOME/.luarocks/bin
+fi
+
+export PIP_REQUIRE_VIRTUALENV=false
+export TERMCMD=urxvt # needed for ranger
+export QT_QPA_PLATFORMTHEME='qt5ct'

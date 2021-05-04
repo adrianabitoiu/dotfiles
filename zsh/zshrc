@@ -1,0 +1,38 @@
+set -o PROMPT_SUBST
+set -o noautomenu
+set -o nomenucomplete
+autoload -U compinit
+autoload -Uz select-word-style
+select-word-style bash
+autoload -Uz run-help
+zstyle ':completion:*' rehash true
+eval "$(dircolors)"
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+unalias run-help
+alias help='run-help'
+
+compinit
+
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+
+ZLE_REMOVE_SUFFIX_CHARS=''
+
+PROMPT='%B%F{cyan}[%f%b%B%F{blue}%n@%m%f%b%B%F{cyan}]%f%b%B%F{yellow}$%f%b '
+RPROMPT='%B%F{cyan}[%f%b%F{yellow}%~%f%B%F{cyan]%f%b'
+#RPROMPT='[%F{yellow}%~%f] [$(check_exit_code)]'
+
+bindkey -e command
+
+if [ -f ~/.zsh_aliases ]; then
+    . ~/.zsh_aliases
+fi
+
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+
+if [ -f /usr/bin/aws_zsh_completer.sh ]; then
+    . /usr/bin/aws_zsh_completer.sh
+fi
