@@ -19,8 +19,9 @@ SAVEHIST=1000
 
 ZLE_REMOVE_SUFFIX_CHARS=''
 
-PROMPT='%B%F{cyan}[%f%b%B%F{blue}%n@%m%f%b%B%F{cyan}]%f%b%B%F{yellow}$%f%b '
-RPROMPT='%B%F{cyan}[%f%b%F{yellow}%~%f%B%F{cyan]%f%b'
+PROMPT='%B%F{cyan}[%f%b%B%F{blue}%n@%m%f%b%B%F{cyan}]%f%b%B%F{yellow}%f%b %B%F{cyan}(%f%b%F{yellow}%d%f%B%F{cyan})%f%b
+%B%F{yellow}$%f%b '
+#RPROMPT='%B%F{cyan}[%f%b%F{yellow}%~%f%B%F{cyan]%f%b'
 #RPROMPT='[%F{yellow}%~%f] [$(check_exit_code)]'
 
 bindkey -e command
